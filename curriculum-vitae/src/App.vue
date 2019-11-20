@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <div class="title">
-      一个懒癌患者的自我救赎
+      <!--一个懒癌患者的自我救赎-->11
     </div>
-    <ul>
-      <li @click="turnTo('deepCopy')">对象数组深拷贝</li>
-      <li>css 拼图特效</li>
-    </ul>
-    <router-view/>
+    <div class="content">
+      <ul>
+        <li @click="turnTo('deepCopy')">对象数组深拷贝</li>
+        <li @click="turnTo('puzzle')">css 拼图特效</li>
+      </ul>
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -43,9 +45,17 @@ export default {
     margin-top: 60px;
 
     .title {
+      height: 50px;
+      line-height: 50px;
       font-size: 46px;
       font-weight: bolder;
     }
 
+    .content{
+      height: calc(100vh - 110px);
+      display: grid;
+      grid-template-columns: 200px auto;
+      grid-template-rows: auto 50px;
+    }
   }
 </style>
