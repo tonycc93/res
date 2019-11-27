@@ -4,7 +4,7 @@
       <!--一个懒癌患者的自我救赎-->11
     </div>
     <div class="content">
-      <ul>
+      <ul class="menu">
         <li @click="turnTo('deepCopy')">对象数组深拷贝</li>
         <li @click="turnTo('puzzle')">css 拼图特效</li>
       </ul>
@@ -51,11 +51,27 @@ export default {
       font-weight: bolder;
     }
 
-    .content{
+    .content {
       height: calc(100vh - 110px);
       display: grid;
       grid-template-columns: 200px auto;
       grid-template-rows: auto 50px;
+      justify-items: start;
+
+      .menu {
+        background-color: #353D52;
+        margin: 0;
+        list-style: none;
+        padding: 10px 20px;
+        width: 100%;
+      }
+
+      .menu > li {
+        color: white;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 </style>
