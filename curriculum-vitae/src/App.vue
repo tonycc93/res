@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <div class="title">
-      <!--一个懒癌患者的自我救赎-->11
+      代码库
     </div>
     <div class="content">
       <ul class="menu">
         <li @click="turnTo('deepCopy')">对象数组深拷贝</li>
         <li @click="turnTo('puzzle')">css 拼图特效</li>
+        <li @click="turnTo('cssAnimation')">css 动画</li>
       </ul>
       <router-view/>
     </div>
@@ -42,13 +43,17 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
 
     .title {
-      height: 50px;
-      line-height: 50px;
-      font-size: 46px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 28px;
+      padding-left: 10px;
       font-weight: bolder;
+      /*float: left;*/
+      text-align: left;
+      background-color: #353D52;
+      color: white;
     }
 
     .content {
@@ -59,11 +64,12 @@ export default {
       justify-items: start;
 
       .menu {
-        background-color: #353D52;
+        width: 100%;
+        height: 100%;
+        padding: 0;
         margin: 0;
         list-style: none;
-        padding: 10px 20px;
-        width: 100%;
+        background-color: #191f31;
       }
 
       .menu > li {
@@ -71,6 +77,11 @@ export default {
         list-style: none;
         padding: 0;
         margin: 0;
+        background-color: #191f31;
+      }
+
+      li:nth-child(even) {
+        background-color: #353D52;
       }
     }
   }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import personInfo from '../components/person-info'
-import {deepCopy, puzzle, vueReactive} from '../components/collection'
+import {deepCopy, puzzle, vueReactive, cssAnimation} from '../components/collection'
 // import deepCopy from '../components/collection/deep-copy'
 // import puzzle from '../components/collection/puzzle'
 // import vueReactive from '../components/collection/vue-reactive'
@@ -14,7 +14,7 @@ export default new Router({
     name: 'personInfo',
     component: personInfo
   }, {
-    path: '/deep-copy',
+    path: '/deepCopy', // 只能用驼峰？
     name: 'deepCopy',
     component: deepCopy
   }, {
@@ -22,8 +22,12 @@ export default new Router({
     name: 'puzzle',
     component: puzzle
   }, {
-    path: '/vue-reactive',
+    path: '/vueReactive',
     name: 'vueReactive',
     component: vueReactive
+  }, {
+    path: '/cssAnimation',
+    name: 'cssAnimation',
+    component: cssAnimation
   }]
 })
