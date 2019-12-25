@@ -10,7 +10,6 @@
       如意金箍棒可还行
     </div>
     <div>有空康康animation Web API，用js操作，感觉跟数据关联更好做</div>
-
   </div>
 </template>
 
