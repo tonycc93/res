@@ -2,6 +2,10 @@
   <div id="app">
     <div class="title">
       代码库
+      <div class="right-title-content">
+        <weather></weather>
+        <clock></clock>
+      </div>
     </div>
     <div class="content">
       <ul class="menu">
@@ -20,8 +24,11 @@
   idea默认美化代码将<script>标签下的内容，
   可以在codeStyle中修改，具体看收藏/掘金
 */
+import Clock from './components/collection/clock'
+import Weather from './components/collection/weather'
 export default {
   name: 'App',
+  components: {Weather, Clock},
   methods: {
     /**
      *  跳转
@@ -54,6 +61,13 @@ export default {
       text-align: left;
       background-color: #353D52;
       color: white;
+
+      .right-title-content {
+        float: right;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
     .content {
