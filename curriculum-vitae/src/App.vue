@@ -83,19 +83,19 @@ export default {
         padding: 0;
         margin: 0;
         list-style: none;
-        background-color: #191f31;
+        background-color: lightgray;
       }
 
       .menu > li {
-        color: white;
+        color: black;
         list-style: none;
         padding: 0;
         margin: 0;
-        background-color: #191f31;
+        /*background-color: #191f31;*/
       }
 
       li:nth-child(even) {
-        background-color: #353D52;
+        /*background-color: #353D52;*/
       }
     }
   }
